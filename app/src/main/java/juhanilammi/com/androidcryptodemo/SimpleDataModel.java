@@ -20,12 +20,10 @@ import juhanilammi.com.androidcryptodemo.modules.crypto.CryptoController;
  */
 public class SimpleDataModel {
     private CryptoController cryptController;
-
     private String plainString;
     private byte[] cryptedStringByteArray;
     private String encryptedString;
-
-
+    
     public SimpleDataModel() {
         try {
             cryptController = new CryptoController("AES/ECB/PKCS5Padding");
@@ -66,10 +64,10 @@ public class SimpleDataModel {
         return encryptedString;
     }
 
-    public String decryptString(){
+    public String decryptString() {
         String returable = "";
         try {
-            returable= cryptController.decrypt(cryptedStringByteArray);
+            returable = cryptController.decrypt(cryptedStringByteArray);
         } catch (BadPaddingException e) {
             e.printStackTrace();
         } catch (IllegalBlockSizeException e) {

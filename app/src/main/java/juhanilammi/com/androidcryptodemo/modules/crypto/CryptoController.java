@@ -1,9 +1,5 @@
 package juhanilammi.com.androidcryptodemo.modules.crypto;
 
-import android.util.Base64;
-import android.util.Log;
-
-import java.io.ByteArrayInputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.AlgorithmParameters;
 import java.security.InvalidAlgorithmParameterException;
@@ -13,7 +9,6 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.InvalidParameterSpecException;
 import java.security.spec.KeySpec;
-import java.security.spec.X509EncodedKeySpec;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -21,7 +16,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
@@ -46,12 +40,11 @@ public class CryptoController {
     }
 
     /**
-     *
-     * @param input password
-     * @param seedCount SecureRandom seed count
-     * @param iterations Number of iterations
-     * @param KeyAlgorithm SecretKey algorithm
-     * @param KeySize Key length
+     * @param input         password
+     * @param seedCount     SecureRandom seed count
+     * @param iterations    Number of iterations
+     * @param KeyAlgorithm  SecretKey algorithm
+     * @param KeySize       Key length
      * @param keySpecString Key spec type as string
      * @throws NoSuchAlgorithmException
      * @throws InvalidKeySpecException
@@ -68,9 +61,8 @@ public class CryptoController {
     }
 
     /**
-     *
-     * @param input Password
-     * @param seedCount SecureRandom seed count
+     * @param input      Password
+     * @param seedCount  SecureRandom seed count
      * @param iterations Number of Iterations
      * @throws NoSuchAlgorithmException
      * @throws InvalidKeySpecException
@@ -87,7 +79,6 @@ public class CryptoController {
     }
 
     /**
-     *
      * @param string String to encrypt
      * @return byte array of encrypted String
      * @throws BadPaddingException
@@ -103,7 +94,6 @@ public class CryptoController {
     }
 
     /**
-     *
      * @param encryptedByteArray byte array of encrypted String
      * @return
      * @throws BadPaddingException

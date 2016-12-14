@@ -3,9 +3,8 @@ package juhanilammi.com.androidcryptodemo;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView details = new TextView(this);
         dialog1.setView(details);
         dialog1.setTitle("Details");
-        details.setText(simpleDataModel.getCryptoDetails()+"\r\nKey generated in "+time+" seconds");
+        details.setText(simpleDataModel.getCryptoDetails() + "\r\nKey generated in " + time + " seconds");
         dialog1.setNeutralButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -106,9 +105,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadFinished(Boolean aBoolean) {
         loadingDialog.dismiss();
-        time = (Calendar.getInstance().getTimeInMillis()-time)/1000;
+        time = (Calendar.getInstance().getTimeInMillis() - time) / 1000;
         showInputStringDialog();
     }
+
     /**
      * A simple task for loading...
      */
