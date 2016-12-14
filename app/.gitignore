@@ -1,1 +1,4 @@
 /build
+
+src/main/res/mip*
+src/main/androidTest
