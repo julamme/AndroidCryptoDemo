@@ -116,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(String... params) {
-            Log.d("AAA", "doInBackground: "+params[0]);
             boolean result = simpleDataModel.insertPassword(params[0]);
             return result;
         }
@@ -124,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
-            Log.d("TASK", "onPostExecute: ");
             loadFinished(aBoolean);
         }
     }
