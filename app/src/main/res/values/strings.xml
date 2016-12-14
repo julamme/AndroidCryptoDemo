@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidCryptoDemo</string>
+    <string name="encrypted">Show Encrypted String</string>
+    <string name="decrypted">Show decrypted string</string>
+    <string name="text_appears">String will appear here</string>
+    <string name="show_encryption_details">Show crypto details</string>
+    <string name="creating_key">Creating key</string>
+</resources>
